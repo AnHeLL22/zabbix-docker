@@ -21,6 +21,8 @@ services:
     soft: 20000
     hard: 40000
   deploy:
+   placement:
+      constraints: [node.role == worker]
    resources:
     limits:
       cpus: '0.70'
@@ -84,6 +86,8 @@ services:
     soft: 20000
     hard: 40000
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.70'
@@ -133,6 +137,8 @@ services:
     soft: 20000
     hard: 40000
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.70'
@@ -183,6 +189,8 @@ services:
    - ./zbx_env/etc/ssl/apache2:/etc/ssl/apache2:ro
    - ./zbx_env/usr/share/zabbix/modules/:/usr/share/zabbix/modules/:ro
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.70'
@@ -237,6 +245,8 @@ services:
    - ./zbx_env/etc/ssl/nginx:/etc/ssl/nginx:ro
    - ./zbx_env/usr/share/zabbix/modules/:/usr/share/zabbix/modules/:ro
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.70'
@@ -295,6 +305,8 @@ services:
    - ./zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
    - ./zbx_env/var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:ro
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.2'
@@ -328,6 +340,8 @@ services:
   ports:
    - "10052:10052"
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.5'
@@ -359,6 +373,8 @@ services:
   volumes:
    - snmptraps:/var/lib/zabbix/snmptraps:rw
   deploy:
+   placement:
+      constraints: [node.role == worker]
    resources:
     limits:
       cpus: '0.5'
@@ -390,6 +406,8 @@ services:
   volumes:
    - ./zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
   deploy:
+   placement:
+      constraints: [node.role == worker]  
    resources:
     limits:
       cpus: '0.5'
