@@ -462,6 +462,7 @@ services:
 networks:
   zbx_net_frontend:
     driver: overlay
+    attachable: true
     # driver: bridge
     # driver_opts:
     #   com.docker.network.enable_ipv6: "false"
@@ -471,6 +472,7 @@ networks:
     #   - subnet: 172.16.238.0/24
   zbx_net_backend:
     driver: overlay
+    attachable: true
     # driver: bridge
     # driver_opts:
     #   com.docker.network.enable_ipv6: "false"
