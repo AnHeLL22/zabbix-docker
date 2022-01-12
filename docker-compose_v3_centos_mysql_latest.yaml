@@ -65,8 +65,8 @@ services:
 
  zabbix-proxy-sqlite3:
   image: zabbix/zabbix-proxy-sqlite3:centos-5.4-latest
-  profiles:
-   - all
+  # profiles:
+  #  - all
   ports:
    - "10061:10051"
   volumes:
@@ -114,8 +114,8 @@ services:
 
  zabbix-proxy-mysql:
   image: zabbix/zabbix-proxy-mysql:centos-5.4-latest
-  profiles:
-   - all
+  # profiles:
+  #  - all
   ports:
    - "10071:10051"
   volumes:
@@ -172,8 +172,8 @@ services:
 
  zabbix-web-apache-mysql:
   image: zabbix/zabbix-web-apache-mysql:centos-5.4-latest
-  profiles:
-   - all
+  # profiles:
+  #  - all
   ports:
    - "8081:8080"
    - "8443:8443"
@@ -282,9 +282,9 @@ services:
 
  zabbix-agent:
   image: zabbix/zabbix-agent:centos-5.4-latest
-  profiles:
-   - full
-   - all
+  # profiles:
+  #  - full
+  #  - all
   ports:
    - "10050:10050"
   volumes:
@@ -322,9 +322,9 @@ services:
 
  zabbix-java-gateway:
   image: zabbix/zabbix-java-gateway:centos-5.4-latest
-  profiles:
-   - full
-   - all
+  # profiles:
+  #  - full
+  #  - all
   ports:
    - "10052:10052"
   deploy:
@@ -351,9 +351,9 @@ services:
 
  zabbix-snmptraps:
   image: zabbix/zabbix-snmptraps:centos-5.4-latest
-  profiles:
-   - full
-   - all
+  # profiles:
+  #  - full
+  #  - all
   ports:
    - "162:1162/udp"
   volumes:
@@ -380,9 +380,9 @@ services:
 
  zabbix-web-service:
   image: zabbix/zabbix-web-service:centos-5.4-latest
-  profiles:
-   - full
-   - all
+  # profiles:
+  #  - full
+  #  - all
   ports:
    - "10053:10053"
   cap_add:
